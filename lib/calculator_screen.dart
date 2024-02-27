@@ -196,7 +196,11 @@ class _CalculateScreenState extends State<CalculateScreen> {
       // means when we add number one and the add operand we cant add numbers one again
       // when number1 is "4.5" it shouldnt add another btn.dot.
       if (value == btn.dot && number1.contains(btn.dot)) return;
-      if (value == btn.dot && number1.isEmpty || number1 == btn.n0) {
+      if (value == btn.n0 && number1.isEmpty && number2.isEmpty) return;
+      if (value == btn.dot && number1.isEmpty && number2.isEmpty) {
+        value = "0.";
+      }
+      if (value == btn.dot && number1.isEmpty && number1 == btn.n0) {
         // if number1 is "" or number is "0"
         value = "0.";
       }

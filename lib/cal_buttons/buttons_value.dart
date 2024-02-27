@@ -1,5 +1,5 @@
 class btn {
-  static const String del = "D";
+  static const String del = "del";
   static const String clr = "C";
   static const String per = "%";
   static const String multiply = "×";
